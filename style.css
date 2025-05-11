@@ -1,0 +1,150 @@
+body {
+    font-family: Tahoma, sans-serif;
+    color: #282828;
+    margin: 0;
+    background-color: #f8f8f8;
+}
+
+.product {
+    display: flex;
+    flex-wrap: nowrap;
+    /* Щоб текст і картинка завжди були на одній лінії */
+    align-items: center;
+    /* Вирівнюємо по центру */
+    justify-content: space-between;
+    /* Рівномірно розподіляємо простір */
+    padding: 1rem;
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-info {
+    width: 55%;
+    /* Трохи більше місця для тексту */
+    padding: 1rem;
+    text-align: left;
+    /* Вирівнюємо текст ліворуч */
+}
+
+img {
+    border: 1px solid #d8d8d8;
+    width: 100%;
+    max-width: 350px;
+    margin: 0;
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    list-style-type: disc;
+    margin-bottom: 5px;
+}
+
+span {
+    color: red;
+    font-weight: bold;
+}
+
+p {
+    font-size: 16px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Колірні кружечки */
+.color-boxes {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.color-box {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #000;
+    transition: transform 0.2s ease-in-out;
+}
+
+.color-box:hover {
+    transform: scale(1.1);
+}
+
+/* Кнопка "Додати у кошик" */
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Для адаптивності */
+@media (max-width: 768px) {
+    .product {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-image,
+    .product-info {
+        width: 100%;
+    }
+
+    img {
+        width: 80%;
+    }
+}
+
+.more-products {
+    display: block;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
